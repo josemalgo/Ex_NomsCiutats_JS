@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>FASE 4</title>    
+    <meta charset="UTF-8">
+  </head>  
+  <body>    
+  </body>  
+  <script>
+
+    let city1 = "";   
+    let city2 = "";
+    let city3 = "";
+    let city4 = "";
+    let city5 = "";
+    let city6 = "";
+    
+    city1 = cityName();
+    city2 = cityName();
+    city3 = cityName();
+    city4 = cityName();
+    city5 = cityName();
+    city6 = cityName();
+    
+    console.log("\nMostrem ciutats introduïdes");
+    printCity(city1);
+    printCity(city2);
+    printCity(city3);
+    printCity(city4);
+    printCity(city5);
+    printCity(city6);
+
+    arrayCity1 = new Array(city1.length);
+    arrayCity2 = new Array(city2.length);
+    arrayCity3 = new Array(city3.length);
+    arrayCity4 = new Array(city4.length);
+    arrayCity5 = new Array(city5.length);
+    arrayCity6 = new Array(city6.length);
+
+    arrayCity1 = Array.from(city1);
+    arrayCity2 = Array.from(city2);
+    arrayCity3 = Array.from(city3);
+    arrayCity4 = Array.from(city4);
+    arrayCity5 = Array.from(city5);
+    arrayCity6 = Array.from(city6);
+    
+    console.log("Mostrem arrays invertits"); 
+    printCityReverse(arrayCity1.reverse());
+    printCityReverse(arrayCity2.reverse());
+    printCityReverse(arrayCity3.reverse());
+    printCityReverse(arrayCity4.reverse());
+    printCityReverse(arrayCity5.reverse());
+    printCityReverse(arrayCity6.reverse());
+
+    function cityName(){
+      return prompt("Introdueix el nom d'una ciutat:");
+    }
+
+    function printCity(city){
+      console.log(city);
+    }
+
+    function printCityReverse(city){
+      console.log(...city);
+    }
+  
+  </script>
+</html>
+
+
+

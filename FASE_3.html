@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>FASE 3</title>    
+    <meta charset="UTF-8">
+  </head>  
+  <body>    
+  </body>  
+  <script>
+
+    let city1 = "";   
+    let city2 = "";
+    let city3 = "";
+    let city4 = "";
+    let city5 = "";
+    let city6 = "";
+    
+    city1 = cityName();
+    city2 = cityName();
+    city3 = cityName();
+    city4 = cityName();
+    city5 = cityName();
+    city6 = cityName();
+    
+    console.log("\nMostrem ciutats introduïdes");
+    PrintCity(city1);
+    PrintCity(city2);
+    PrintCity(city3);
+    PrintCity(city4);
+    PrintCity(city5);
+    PrintCity(city6);
+    
+    let arrayCities = [city1, city2, city3, city4, city5, city6];
+    let arrayCitiesModify = new Array(arrayCities.length);
+    
+    for (let i = 0; i < arrayCities.length; i++){
+      arrayCitiesModify[i] = arrayCities[i].replace(/a/gi, '4');
+    }
+    
+    arrayCitiesModify.sort();
+    
+    console.log("\nArray odenat!");
+    arrayCitiesModify.forEach(element => PrintCity(element));
+
+    function cityName(){
+      return prompt("Introdueix el nom d'una ciutat:");
+    }
+
+    function PrintCity(city){
+      console.log(city);
+    }
+
+     
+  </script>
+</html>
+
+
+
